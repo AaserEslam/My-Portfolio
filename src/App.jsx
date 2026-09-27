@@ -1,4 +1,4 @@
-import { Home } from "lucide-react";
+import Home from "./Pages/Home";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NotFound from "./Pages/NotFound";
