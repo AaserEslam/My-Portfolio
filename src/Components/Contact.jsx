@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa6';
 import {cn} from '@/Lib/utils';
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "@/Hooks/use-toast";
 import emailjs from '@emailjs/browser';
 const Contact = () => {
 
