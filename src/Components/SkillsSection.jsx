@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {cn} from "@/lib/utils"
+import {cn} from "@/Lib/utils"
 import htmlcss from "../assets/HTMLCSS.png"
 import js from "../assets/JS.png"
 import react from "../assets/React.png"
