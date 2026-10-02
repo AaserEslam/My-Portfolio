@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExternalLink } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
 import { GoLinkExternal } from 'react-icons/go'
 
@@ -27,9 +27,9 @@ const ProjectsSection = () => {
     ]
 
   return (
-    <section id='projects' className='py-24 px-4 relative'>
+    <section id='projects' className='py-24 px-4 relative z-0'>
         <div className="container mx-auto max-w-5xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-center">Featured <span className='text-primary'>Projects</span></h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center">Featured <span className='gradient-text'>Projects</span></h2>
             <p className='text-center text-muted-foreground mb-12 max-w-2xl mx-auto mt-4'>
                 Here are some if my recent projects, Each project was carefully crafted with attention to detail, performance, and user experience
             </p>
@@ -47,7 +47,7 @@ const ProjectsSection = () => {
                             </span>
                           ))}
                       </div>
-                      <h3 className='text-xl font-semibold mb-1'>
+                      <h3 className='text-xl font-semibold my-4'>
                         {project.title}
                       </h3>
                       <p className='text-muted-foreground text-sm mb-4'>
@@ -66,6 +66,11 @@ const ProjectsSection = () => {
                       </div>        
                   </div>
                 ))}
+            </div>
+            <div className="text-center mt-12">
+                  <a target='_blank' href="https://github.com/AaserEslam" className='cosmic-button w-fit flex items-center mx-auto gap-2'>
+                    Check My GitHub <ArrowRight size={16}/>
+                  </a>
             </div>
         </div>
     </section>

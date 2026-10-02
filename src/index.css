@@ -20,7 +20,8 @@
 
 /* Keyframes outside @theme in Tailwind v4 */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -29,7 +30,8 @@
 }
 
 @keyframes pulse-subtle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -67,7 +69,8 @@
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --primary: 250 47% 60%;
+    --primary: 215 100% 58%;
+    --blueSec: 191 100% 43%;
     --primary-foreground: 210 40% 98%;
     --border: 214 32% 91%;
   }
@@ -76,7 +79,8 @@
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
     --card: 222 47% 8%;
-    --primary: 250 65% 65%;
+    --primary: 215 100% 58%;
+    --blueSec: 191 100% 43%;
     --primary-foreground: 213 31% 91%;
     --border: 217 33% 20%;
   }
@@ -89,7 +93,9 @@
   }
   body {
     @apply bg-background text-foreground transition-colors duration-300;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 }
 
@@ -129,9 +135,14 @@
   background-clip: padding-box;
   border: 1px solid transparent;
 }
+@utility gradient-text {
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--blueSec)));
+  background-clip: text;
+  color: transparent;
+}
 
 @utility cosmic-button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
+  @apply px-6 py-2 rounded-full bg-linear-to-r from-primary to-[hsl(var(--blueSec))] text-primary-foreground font-medium
          transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
          hover:scale-105 active:scale-95;
 }

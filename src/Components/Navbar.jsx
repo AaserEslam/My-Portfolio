@@ -50,14 +50,14 @@ const Navbar = () => {
       <div className="container flex items-center max-md:justify-between md:gap-170">
         <a
           href="#hero"
-          className="text-xl font-bold text-primary flex items-center"
+          className="text-xl font-bold gradient-text flex items-center"
         >
           <span className="relative z-10">
             <span className="text-glow text-foreground">Aaser </span>Portfolio
           </span>
         </a>
 
-          {/* Desktop Nav */}
+        {/* Desktop Nav */}
         <div className="hidden md:flex space-x-8">
           {navItems.map((item, key) => (
             <a
@@ -71,16 +71,26 @@ const Navbar = () => {
         </div>
         {/* Mobile Nav */}
 
-        <button aria-label={isMenuOpen ? "Close Menu" : "Open Menu"} className="md:hidden p-2 text-foreground z-50" onClick={() => setIsMenuOpen((prev) => !prev)}>{isMenuOpen ? <X/> : <Menu size={24}/>}</button>
-      <div
-        className={cn(
-          "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-          "transition-all duration-300 md:hidden", isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        )}
-      >
-        <div className="flex flex-col space-y-8 text-xl">
+        <button
+          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          className="md:hidden translate-x-7 p-2 text-foreground z-50"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+        >
+          {isMenuOpen ? <X /> : <Menu size={24} />}
+        </button>
+        <div
+          className={cn(
+            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center h-screen",
+            "transition-all duration-300 md:hidden",
+            isMenuOpen
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none",
+          )}
+        >
+          <div className="flex flex-col space-y-8 text-xl">
             {navItems.map((item, key) => (
-              <a onClick={() => setIsMenuOpen(false)}
+              <a
+                onClick={() => setIsMenuOpen(false)}
                 href={item.href}
                 key={key}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
@@ -88,8 +98,8 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
+          </div>
         </div>
-      </div>
       </div>
     </nav>
   );

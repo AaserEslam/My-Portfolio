@@ -23,7 +23,7 @@ const StarBackground = () => {
         setStars(newStars)
     }
     const generateMeteors = () => {
-        const numberOfMetoers = 4
+        const numberOfMetoers = 5
         const newMetoers = []
 
         for(let i = 0 ; i < numberOfMetoers ; i++){

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <!-- خلفية داكنة بحواف مدورة وتدرج ذكي -->
+  <defs>
+    <linearGradient id="cosmic-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="icon-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="64" height="64" rx="16" fill="url(#cosmic-grad)"/>
+  <rect width="62" height="62" x="1" y="1" rx="15" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- رمز البرمجة والتكويد < /> -->
+  <path d="M 20 22 L 10 32 L 20 42" fill="none" stroke="url(#icon-glow)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 44 22 L 54 32 L 44 42" fill="none" stroke="url(#icon-glow)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="36" y1="18" x2="28" y2="46" stroke="#c084fc" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -9,7 +9,7 @@ const HeroSection = () => {
                 <div className='space-y-6'>
                         <h1 className='text-3xl md:text-5xl font-bold tracking-tight'>
                             <span className='opacity-0 animate-fade-in-delay-1'>Hi, I'm </span>
-                            <span className='text-primary opacity-0 animate-fade-in-delay-2'>Aaser </span>
+                            <span className='gradient-text opacity-0 animate-fade-in-delay-2'>Aaser </span>
                             <span className='ml-1 opacity-0 animate-fade-in-delay-3'>Eslam</span>
                         </h1>
                         <p className='text-md md:text-lg text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-4'>I enjoy transforming ideas and designs into modern, responsive, and interactive web applications.</p>
